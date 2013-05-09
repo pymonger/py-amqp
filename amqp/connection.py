@@ -847,8 +847,8 @@ class Connection(AbstractChannel):
 
         self.prev_sent, self.prev_recv = sent_now, recv_now
 
-        if self.missed_heartbeats >= rate:
-            raise ConnectionForced('Too many heartbeats missed')
+        #if self.missed_heartbeats >= rate:
+        #    raise ConnectionForced('Too many heartbeats missed')
 
     def _x_tune_ok(self, channel_max, frame_max, heartbeat):
         """Negotiate connection tuning parameters
